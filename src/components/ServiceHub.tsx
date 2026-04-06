@@ -1,5 +1,5 @@
 const AI2FLOW_PATH = "/ai2flow";
-const COLECTOPS_URL = "/colectops/index.html";
+const COLECTOPS_URL = "/colectops";
 
 export default function ServiceHub() {
   return (

@@ -22,6 +22,7 @@ import {
   type OnSelectionChangeFunc,
 } from "@xyflow/react";
 import LoginModal from "./components/LoginModal";
+import ColectOpsApp from "./components/ColectOpsApp";
 import ServiceHub from "./components/ServiceHub";
 import Toolbar from "./components/Toolbar";
 import LaneGridOverlay from "./components/LaneGridOverlay";
@@ -773,16 +774,23 @@ function normalizeFlow(data: FlowJson): FlowJson {
 
 const AUTH_SESSION_KEY = "cxstudio-auth";
 const AI2FLOW_PATH = "/ai2flow";
+const COLECTOPS_PATH = "/colectops";
 
 export default function App() {
   const pathname =
     typeof window !== "undefined"
       ? window.location.pathname.replace(/\/+$/, "") || "/"
       : "/";
-  const shouldRenderServiceHub = pathname !== AI2FLOW_PATH;
+  const shouldRenderAi2Flow = pathname === AI2FLOW_PATH;
+  const shouldRenderColectOps = pathname === COLECTOPS_PATH;
+  const shouldRenderServiceHub = !shouldRenderAi2Flow && !shouldRenderColectOps;
 
   if (shouldRenderServiceHub) {
     return <ServiceHub />;
+  }
+
+  if (shouldRenderColectOps) {
+    return <ColectOpsApp />;
   }
 
   const [isAuthenticated, setIsAuthenticated] = useState(() => {

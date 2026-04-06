@@ -1,0 +1,231 @@
+.colectops-shell {
+  min-height: 100vh;
+  background: #f3f4f6;
+  color: #17202a;
+  padding: 24px;
+}
+
+.colectops-header {
+  max-width: 920px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.colectops-header h1 {
+  margin: 0;
+}
+
+.colectops-header p {
+  margin: 4px 0 0;
+  color: #64748b;
+}
+
+.colectops-header button,
+.colectops-results button,
+.colectops-login__form button {
+  background: #1f2937;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.colectops-login {
+  max-width: 420px;
+  margin: 10vh auto 0;
+  background: #fff;
+  border: 1px solid #d9dfeb;
+  border-radius: 18px;
+  padding: 28px;
+}
+
+.colectops-login p {
+  color: #64748b;
+}
+
+.colectops-login__form {
+  margin-top: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.colectops-password {
+  display: flex;
+  gap: 8px;
+}
+
+.colectops-password input {
+  flex: 1;
+}
+
+.colectops-password input,
+.colectops-password button {
+  border: 1px solid #d9dfeb;
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #fff;
+}
+
+.colectops-password button {
+  color: #17202a;
+}
+
+.colectops-login__error {
+  color: #b91c1c;
+  margin: 0;
+  font-size: 13px;
+}
+
+.colectops-upload,
+.colectops-processing,
+.colectops-results {
+  max-width: 920px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #d9dfeb;
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.colectops-dropzone {
+  border: 2px dashed #cbd5e1;
+  border-radius: 14px;
+  min-height: 260px;
+  display: grid;
+  place-content: center;
+  gap: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.colectops-dropzone--over {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.colectops-dropzone h2 {
+  margin: 0;
+}
+
+.colectops-dropzone p,
+.colectops-dropzone small {
+  margin: 0;
+  color: #64748b;
+}
+
+.colectops-progress {
+  width: 100%;
+  height: 12px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  overflow: hidden;
+  margin-top: 14px;
+}
+
+.colectops-progress > div {
+  height: 100%;
+  background: #1f2937;
+  transition: width 0.2s ease;
+}
+
+.colectops-processing__status {
+  margin-top: 10px;
+  color: #475569;
+}
+
+.colectops-processing__hint {
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.colectops-results__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.colectops-results__actions > div {
+  display: flex;
+  gap: 8px;
+}
+
+.colectops-results__content {
+  display: grid;
+  gap: 10px;
+}
+
+.colectops-utterance {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.colectops-utterance__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.colectops-speaker {
+  font-size: 12px;
+  border-radius: 999px;
+  padding: 4px 8px;
+  font-weight: 600;
+}
+
+.colectops-speaker--a {
+  background: #dbeafe;
+  color: #1e3a8a;
+}
+
+.colectops-speaker--b {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.colectops-speaker--c {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.colectops-speaker--d {
+  background: #fce7f3;
+  color: #9d174d;
+}
+
+.colectops-utterance__time {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.colectops-utterance__text {
+  margin: 8px 0 0;
+  color: #0f172a;
+}
+
+.colectops-toast {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: #fff;
+  z-index: 1000;
+}
+
+.colectops-toast--info,
+.colectops-toast--success {
+  background: #166534;
+}
+
+.colectops-toast--error {
+  background: #b91c1c;
+}
