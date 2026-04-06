@@ -36,6 +36,14 @@
     {
       "source": "/ai2flow/(.*)",
       "destination": "/index.html"
+    },
+    {
+      "source": "/design-system",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/design-system/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
