@@ -1,0 +1,850 @@
+{
+  "nodes": [
+    {
+      "id": "p1-contexto",
+      "type": "flowNode",
+      "position": {
+        "x": 262,
+        "y": 108
+      },
+      "data": {
+        "id": "p1-contexto",
+        "type": "action",
+        "laneId": "lane-user",
+        "columnIndex": 0,
+        "channel": "web",
+        "channels": [
+          "web"
+        ],
+        "connectorsPerSide": {
+          "top": 0,
+          "bottom": 1,
+          "left": 0,
+          "right": 1
+        },
+        "title": "Objetivo do setup",
+        "description": "Transformar o IA2Flow em produto inicial com IA assistida e fluxo determinístico.",
+        "metadata": {},
+        "laneColorStrong": "#2F6FAD"
+      },
+      "selected": false,
+      "measured": {
+        "width": 220,
+        "height": 141
+      },
+      "dragging": false
+    },
+    {
+      "id": "p2-arquitetura",
+      "type": "flowNode",
+      "position": {
+        "x": 614,
+        "y": 360
+      },
+      "data": {
+        "id": "p2-arquitetura",
+        "type": "action",
+        "laneId": "lane-platform",
+        "columnIndex": 1,
+        "channel": "none",
+        "channels": [],
+        "connectorsPerSide": {
+          "top": 1,
+          "bottom": 1,
+          "left": 1,
+          "right": 1
+        },
+        "title": "Arquitetura recomendada",
+        "description": "GitHub + Vercel (frontend e backend serverless juntos) + domínio Registro.br.",
+        "metadata": {},
+        "laneColorStrong": "#2F6B45"
+      },
+      "selected": false,
+      "measured": {
+        "width": 220,
+        "height": 105
+      },
+      "dragging": false
+    },
+    {
+      "id": "p3-github",
+      "type": "flowNode",
+      "position": {
+        "x": 966,
+        "y": 360
+      },
+      "data": {
+        "id": "p3-github",
+        "type": "action",
+        "laneId": "lane-platform",
+        "columnIndex": 2,
+        "channel": "none",
+        "channels": [],
+        "connectorsPerSide": {
+          "top": 1,
+          "bottom": 0,
+          "left": 1,
+          "right": 1
+        },
+        "title": "Subir código no GitHub",
+        "description": "Criar repositório e versionar projeto React + APIs em /api/*.",
+        "metadata": {},
+        "laneColorStrong": "#2F6B45"
+      },
+      "selected": false,
+      "measured": {
+        "width": 220,
+        "height": 88
+      }
+    },
+    {
+      "id": "p4-vercel",
+      "type": "flowNode",
+      "position": {
+        "x": 1318,
+        "y": 360
+      },
+      "data": {
+        "id": "p4-vercel",
+        "type": "action",
+        "laneId": "lane-platform",
+        "columnIndex": 3,
+        "channel": "none",
+        "channels": [],
+        "connectorsPerSide": {
+          "top": 1,
+          "bottom": 0,
+          "left": 1,
+          "right": 1
+        },
+        "title": "Conectar no Vercel",
+        "description": "Import Project, integração com GitHub e deploy automático.",
+        "metadata": {},
+        "laneColorStrong": "#2F6B45"
+      },
+      "selected": false,
+      "measured": {
+        "width": 220,
+        "height": 88
+      }
+    },
+    {
+      "id": "p5-dominio",
+      "type": "flowNode",
+      "position": {
+        "x": 1670,
+        "y": 360
+      },
+      "data": {
+        "id": "p5-dominio",
+        "type": "action",
+        "laneId": "lane-platform",
+        "columnIndex": 4,
+        "channel": "none",
+        "channels": [],
+        "connectorsPerSide": {
+          "top": 1,
+          "bottom": 0,
+          "left": 1,
+          "right": 1
+        },
+        "title": "Adicionar domínio",
+        "description": "No Vercel, Settings > Domains, adicionar seu .com.br.",
+        "metadata": {},
+        "laneColorStrong": "#2F6B45"
+      },
+      "selected": false,
+      "measured": {
+        "width": 220,
+        "height": 88
+      }
+    },
+    {
+      "id": "p6-dns",
+      "type": "flowNode",
+      "position": {
+        "x": 2022,
+        "y": 360
+      },
+      "data": {
+        "id": "p6-dns",
+        "type": "action",
+        "laneId": "lane-platform",
+        "columnIndex": 5,
+        "channel": "none",
+        "channels": [],
+        "connectorsPerSide": {
+          "top": 1,
+          "bottom": 0,
+          "left": 1,
+          "right": 1
+        },
+        "title": "Configurar DNS no Registro.br",
+        "description": "Usar CNAME (www) para cname.vercel-dns.com ou A record na raiz para 76.76.21.21.",
+        "metadata": {},
+        "laneColorStrong": "#2F6B45"
+      },
+      "selected": false,
+      "measured": {
+        "width": 220,
+        "height": 125
+      }
+    },
+    {
+      "id": "p7-backend",
+      "type": "flowNode",
+      "position": {
+        "x": 2374,
+        "y": 612
+      },
+      "data": {
+        "id": "p7-backend",
+        "type": "action",
+        "laneId": "lane-backend",
+        "columnIndex": 6,
+        "channel": "none",
+        "channels": [],
+        "connectorsPerSide": {
+          "top": 1,
+          "bottom": 1,
+          "left": 1,
+          "right": 1
+        },
+        "title": "Backend serverless no mesmo projeto",
+        "description": "Sem servidor separado: usar rotas /api/interpret e /api/critic no próprio app.",
+        "metadata": {},
+        "laneColorStrong": "#2A7A74"
+      },
+      "selected": false,
+      "measured": {
+        "width": 220,
+        "height": 125
+      }
+    },
+    {
+      "id": "p8-interpret",
+      "type": "flowNode",
+      "position": {
+        "x": 2726,
+        "y": 612
+      },
+      "data": {
+        "id": "p8-interpret",
+        "type": "action",
+        "laneId": "lane-backend",
+        "columnIndex": 7,
+        "channel": "none",
+        "channels": [],
+        "connectorsPerSide": {
+          "top": 0,
+          "bottom": 3,
+          "left": 1,
+          "right": 1
+        },
+        "title": "/api/interpret",
+        "description": "Recebe input do usuário e converte em instruções estruturadas para atualizar o fluxo.",
+        "metadata": {},
+        "laneColorStrong": "#2A7A74"
+      },
+      "selected": false,
+      "measured": {
+        "width": 220,
+        "height": 105
+      }
+    },
+    {
+      "id": "p9-critic",
+      "type": "flowNode",
+      "position": {
+        "x": 2726,
+        "y": 749
+      },
+      "data": {
+        "id": "p9-critic",
+        "type": "action",
+        "laneId": "lane-backend",
+        "columnIndex": 7,
+        "channel": "none",
+        "channels": [],
+        "connectorsPerSide": {
+          "top": 1,
+          "bottom": 1,
+          "left": 1,
+          "right": 1
+        },
+        "title": "/api/critic",
+        "description": "Avalia o FlowJson e devolve issues, questions e warnings para melhoria contínua.",
+        "metadata": {},
+        "laneColorStrong": "#2A7A74"
+      },
+      "selected": false,
+      "measured": {
+        "width": 220,
+        "height": 105
+      }
+    },
+    {
+      "id": "p10-openai",
+      "type": "flowNode",
+      "position": {
+        "x": 2726,
+        "y": 950
+      },
+      "data": {
+        "id": "p10-openai",
+        "type": "action",
+        "laneId": "lane-ai",
+        "columnIndex": 7,
+        "channel": "none",
+        "channels": [],
+        "connectorsPerSide": {
+          "top": 3,
+          "bottom": 1,
+          "left": 2,
+          "right": 1
+        },
+        "title": "OpenAI somente no backend",
+        "description": "Frontend nunca chama OpenAI direto. Usar OPENAI_API_KEY apenas nas funções serverless.",
+        "metadata": {},
+        "laneColorStrong": "#A83C38"
+      },
+      "selected": false,
+      "measured": {
+        "width": 220,
+        "height": 105
+      }
+    },
+    {
+      "id": "p11-speech",
+      "type": "flowNode",
+      "position": {
+        "x": 3078,
+        "y": 950
+      },
+      "data": {
+        "id": "p11-speech",
+        "type": "action",
+        "laneId": "lane-ai",
+        "columnIndex": 8,
+        "channel": "voice",
+        "channels": [
+          "voice"
+        ],
+        "connectorsPerSide": {
+          "top": 0,
+          "bottom": 1,
+          "left": 1,
+          "right": 1
+        },
+        "title": "Fluxo Speech",
+        "description": "Speech -> texto -> /api/interpret -> instruções JSON -> canvas.",
+        "metadata": {},
+        "laneColorStrong": "#A83C38"
+      },
+      "selected": false,
+      "measured": {
+        "width": 220,
+        "height": 124
+      }
+    },
+    {
+      "id": "p12-limitacoes",
+      "type": "flowNode",
+      "position": {
+        "x": 3078,
+        "y": 1202
+      },
+      "data": {
+        "id": "p12-limitacoes",
+        "type": "comment",
+        "laneId": "lane-notes",
+        "columnIndex": 8,
+        "channel": "none",
+        "channels": [],
+        "connectorsPerSide": {
+          "top": 0,
+          "bottom": 1,
+          "left": 0,
+          "right": 1
+        },
+        "title": "Limitações do setup atual",
+        "description": "Ótimo para MVP, protótipo e produto inicial. Ainda sem banco robusto, colaboração real-time e histórico avançado.",
+        "metadata": {},
+        "laneColorStrong": "#B56E28"
+      },
+      "selected": false,
+      "measured": {
+        "width": 220,
+        "height": 117
+      },
+      "dragging": false
+    },
+    {
+      "id": "p13-evolucao",
+      "type": "flowNode",
+      "position": {
+        "x": 3430,
+        "y": 1202
+      },
+      "data": {
+        "id": "p13-evolucao",
+        "type": "comment",
+        "laneId": "lane-notes",
+        "columnIndex": 9,
+        "channel": "none",
+        "channels": [],
+        "connectorsPerSide": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "title": "Evolução futura",
+        "description": "Quando escalar, evoluir para Supabase ou backend dedicado, mantendo o modelo incremental.",
+        "metadata": {},
+        "laneColorStrong": "#B56E28"
+      },
+      "selected": false,
+      "measured": {
+        "width": 220,
+        "height": 100
+      }
+    },
+    {
+      "id": "p14-resumo",
+      "type": "flowNode",
+      "position": {
+        "x": 3430,
+        "y": 108
+      },
+      "data": {
+        "id": "p14-resumo",
+        "type": "action",
+        "laneId": "lane-user",
+        "columnIndex": 9,
+        "channel": "none",
+        "channels": [],
+        "connectorsPerSide": {
+          "top": 1,
+          "bottom": 0,
+          "left": 1,
+          "right": 1
+        },
+        "title": "Resumo direto",
+        "description": "GitHub (código) + Vercel (deploy+backend) + Registro.br (domínio) + OpenAI (inteligência) + Speech API (entrada).",
+        "metadata": {},
+        "laneColorStrong": "#2F6FAD"
+      },
+      "selected": false,
+      "measured": {
+        "width": 220,
+        "height": 122
+      }
+    },
+    {
+      "id": "p15-proximo-passo",
+      "type": "flowNode",
+      "position": {
+        "x": 3782,
+        "y": 108
+      },
+      "data": {
+        "id": "p15-proximo-passo",
+        "type": "action",
+        "laneId": "lane-user",
+        "columnIndex": 10,
+        "channel": "none",
+        "channels": [],
+        "connectorsPerSide": {
+          "top": 0,
+          "bottom": 0,
+          "left": 1,
+          "right": 0
+        },
+        "title": "Próximo passo prático",
+        "description": "Implementar estrutura de pastas + exemplos de /api/interpret e /api/critic plugáveis no projeto.",
+        "metadata": {},
+        "laneColorStrong": "#2F6FAD"
+      },
+      "selected": false,
+      "measured": {
+        "width": 220,
+        "height": 105
+      }
+    },
+    {
+      "id": "n1",
+      "type": "flowNode",
+      "position": {
+        "x": 1124.5944597823195,
+        "y": 1488.3284768236867
+      },
+      "data": {
+        "id": "n1",
+        "type": "anchor",
+        "channel": "none",
+        "channels": [],
+        "connectorsPerSide": {
+          "top": 1,
+          "bottom": 1,
+          "left": 1,
+          "right": 1
+        },
+        "title": "",
+        "description": "",
+        "metadata": {},
+        "anchorShape": "single-center"
+      },
+      "selected": true,
+      "measured": {
+        "width": 32,
+        "height": 32
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-p2-p3",
+      "source": "p2-arquitetura",
+      "target": "p3-github",
+      "type": "smoothstep",
+      "sourceHandle": "R1",
+      "targetHandle": "L1",
+      "data": {},
+      "selected": false,
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": null
+      }
+    },
+    {
+      "id": "e-p3-p4",
+      "source": "p3-github",
+      "target": "p4-vercel",
+      "type": "smoothstep",
+      "sourceHandle": "R1",
+      "targetHandle": "L1",
+      "data": {},
+      "selected": false,
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": null
+      }
+    },
+    {
+      "id": "e-p4-p5",
+      "source": "p4-vercel",
+      "target": "p5-dominio",
+      "type": "smoothstep",
+      "sourceHandle": "R1",
+      "targetHandle": "L1",
+      "data": {},
+      "selected": false,
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": null
+      }
+    },
+    {
+      "id": "e-p5-p6",
+      "source": "p5-dominio",
+      "target": "p6-dns",
+      "type": "smoothstep",
+      "sourceHandle": "R1",
+      "targetHandle": "L1",
+      "data": {},
+      "selected": false,
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": null
+      }
+    },
+    {
+      "id": "e-p6-p7",
+      "source": "p6-dns",
+      "target": "p7-backend",
+      "type": "smoothstep",
+      "sourceHandle": "R1",
+      "targetHandle": "L1",
+      "data": {},
+      "selected": false,
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": null
+      }
+    },
+    {
+      "id": "e-p7-p8",
+      "source": "p7-backend",
+      "target": "p8-interpret",
+      "type": "smoothstep",
+      "sourceHandle": "R1",
+      "targetHandle": "L1",
+      "data": {},
+      "selected": false,
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": null
+      }
+    },
+    {
+      "id": "e-p10-p11",
+      "source": "p10-openai",
+      "target": "p11-speech",
+      "type": "smoothstep",
+      "sourceHandle": "R1",
+      "targetHandle": "L1",
+      "data": {},
+      "selected": false,
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": null
+      }
+    },
+    {
+      "id": "e-p11-p14",
+      "source": "p11-speech",
+      "target": "p14-resumo",
+      "type": "smoothstep",
+      "sourceHandle": "R1",
+      "targetHandle": "L1",
+      "data": {},
+      "selected": false,
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": null
+      }
+    },
+    {
+      "id": "e-p14-p15",
+      "source": "p14-resumo",
+      "target": "p15-proximo-passo",
+      "type": "smoothstep",
+      "sourceHandle": "R1",
+      "targetHandle": "L1",
+      "data": {},
+      "selected": false,
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": null
+      }
+    },
+    {
+      "type": "smoothstep",
+      "style": {
+        "strokeWidth": 2,
+        "stroke": "var(--flow-edge)"
+      },
+      "source": "p8-interpret",
+      "sourceHandle": "B1",
+      "target": "p10-openai",
+      "targetHandle": "T1",
+      "label": "",
+      "data": {},
+      "selected": false,
+      "id": "xy-edge__p8-interpretB1-p10-openaiT1",
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": null
+      }
+    },
+    {
+      "type": "smoothstep",
+      "style": {
+        "strokeWidth": 2,
+        "stroke": "var(--flow-edge)"
+      },
+      "source": "p8-interpret",
+      "sourceHandle": "B2",
+      "target": "p9-critic",
+      "targetHandle": "T1",
+      "label": "",
+      "data": {},
+      "selected": false,
+      "id": "xy-edge__p8-interpretB2-p9-criticT1",
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": null
+      }
+    },
+    {
+      "type": "smoothstep",
+      "style": {
+        "strokeWidth": 2,
+        "stroke": "var(--flow-edge)"
+      },
+      "source": "p1-contexto",
+      "sourceHandle": "B1",
+      "target": "p2-arquitetura",
+      "targetHandle": "L1",
+      "label": "",
+      "data": {},
+      "selected": false,
+      "id": "xy-edge__p1-contextoB1-p2-arquiteturaL1",
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": null
+      }
+    },
+    {
+      "type": "smoothstep",
+      "style": {
+        "strokeWidth": 2,
+        "stroke": "var(--flow-edge)"
+      },
+      "source": "p7-backend",
+      "sourceHandle": "R1",
+      "target": "p9-critic",
+      "targetHandle": "L1",
+      "label": "",
+      "data": {},
+      "selected": false,
+      "id": "xy-edge__p7-backendR1-p9-criticL1",
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": null
+      }
+    },
+    {
+      "type": "smoothstep",
+      "style": {
+        "strokeWidth": 2,
+        "stroke": "var(--flow-edge)"
+      },
+      "source": "n4",
+      "sourceHandle": "B1",
+      "target": "n4(1)",
+      "targetHandle": "T1",
+      "id": "e2",
+      "label": "",
+      "data": {},
+      "selected": false
+    },
+    {
+      "type": "smoothstep",
+      "style": {
+        "strokeWidth": 2,
+        "stroke": "var(--flow-edge)"
+      },
+      "source": "n4(1)",
+      "sourceHandle": "B1",
+      "target": "n5",
+      "targetHandle": "T1",
+      "id": "e3",
+      "label": "",
+      "data": {},
+      "selected": false
+    }
+  ],
+  "laneSystem": {
+    "lanes": [
+      {
+        "id": "lane-user",
+        "title": "Decisão / Produto",
+        "order": 0,
+        "columnCount": 11
+      },
+      {
+        "id": "lane-platform",
+        "title": "Plataforma / Deploy",
+        "order": 1,
+        "columnCount": 11
+      },
+      {
+        "id": "lane-backend",
+        "title": "Backend / APIs",
+        "order": 2,
+        "columnCount": 11
+      },
+      {
+        "id": "lane-ai",
+        "title": "IA / Segurança",
+        "order": 3,
+        "columnCount": 11
+      },
+      {
+        "id": "lane-notes",
+        "title": "Limitações / Evolução",
+        "order": 4,
+        "columnCount": 11
+      }
+    ],
+    "columns": [
+      {
+        "id": "c1",
+        "title": "Contexto"
+      },
+      {
+        "id": "c2",
+        "title": "Arquitetura"
+      },
+      {
+        "id": "c3",
+        "title": "GitHub"
+      },
+      {
+        "id": "c4",
+        "title": "Vercel"
+      },
+      {
+        "id": "c5",
+        "title": "Domínio"
+      },
+      {
+        "id": "c6",
+        "title": "DNS"
+      },
+      {
+        "id": "c7",
+        "title": "Backend"
+      },
+      {
+        "id": "c8",
+        "title": "Interpret/Critic"
+      },
+      {
+        "id": "c9",
+        "title": "Speech"
+      },
+      {
+        "id": "c10",
+        "title": "Resumo"
+      },
+      {
+        "id": "c11",
+        "title": "Próximo passo"
+      }
+    ],
+    "columnWidth": 320,
+    "rowMinHeight": 220,
+    "cellPadding": 32,
+    "verticalSpacing": 32,
+    "horizontalGap": 32,
+    "verticalGap": 32
+  },
+  "theme": {
+    "artboardBackground": "#FFFFFF",
+    "laneStrongColors": [
+      "#2F6FAD",
+      "#2F6B45",
+      "#2A7A74",
+      "#A83C38",
+      "#B56E28",
+      "#8F7320",
+      "#A84878",
+      "#5A6570",
+      "#1E5A8C",
+      "#2D7A55",
+      "#256F6F",
+      "#8F3D4D",
+      "#A65F20",
+      "#7A6218",
+      "#8B4899",
+      "#4A5562",
+      "#2A7A9A",
+      "#5C6B3A",
+      "#B55A42",
+      "#6B625C"
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "functions": {
+    "api/transcribe.js": {
+      "maxDuration": 60
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/colectops",
+      "destination": "/colectops/index.html"
+    },
+    {
+      "source": "/colectops/(.*)",
+      "destination": "/colectops/$1"
+    },
+    {
+      "source": "/api/transcribe/upload",
+      "destination": "/api/transcribe"
+    },
+    {
+      "source": "/api/transcribe/transcript",
+      "destination": "/api/transcribe"
+    },
+    {
+      "source": "/api/transcribe/transcript/:id",
+      "destination": "/api/transcribe"
+    },
+    {
+      "source": "/api/transcribe/auth",
+      "destination": "/api/transcribe"
+    },
+    {
+      "source": "/ai2flow",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/ai2flow/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
