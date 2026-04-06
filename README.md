@@ -110,19 +110,53 @@ npm run preview
 
 O deploy é automático via **Vercel**. Todo push na branch `main` dispara um novo deploy.
 
-Fluxo padrão:
+Fluxo padrao de publicacao (private -> public):
 
 ```bash
+# no private
+scripts/publish-to-public.sh --apply
+
+# no public (../cxstudio)
+npm ci
+npm run build
 git add .
-git commit -m "descrição"
+git commit -m "descricao"
 git push origin main
 ```
 
 Acompanhe o status em [vercel.com/dashboard](https://vercel.com/dashboard).
 
-## Documentação interna
+### Dry-run de sincronizacao
 
-A documentação de premissas, arquitetura e histórico de construção foi movida para o repositório privado `cxstudio_private`.
+Antes de aplicar, voce pode auditar o que sera enviado:
+
+```bash
+scripts/publish-to-public.sh --dry-run
+```
+
+Os caminhos permitidos para publicacao ficam em `publish-allowlist.txt`.
+
+## Documentacao de arquitetura e evolucao
+
+A documentacao agora segue modelo de portfolio (`cxstudio` pai de `ai2flow` e `colectops`).
+
+Comece por:
+
+- `docs/README.md`
+- `docs/platform/PORTFOLIO_ARCHITECTURE.md`
+- `docs/products/ai2flow/README.md`
+- `docs/products/colectops/README.md`
+
+Pacote tecnico atual de AI2Flow:
+
+- `docs/products/ai2flow/ARCHITECTURE.md`
+- `docs/products/ai2flow/PROJECT_REVIEW.md`
+- `docs/products/ai2flow/TEAM_ONBOARDING.md`
+- `docs/products/ai2flow/DOMAIN_MODEL.md`
+- `docs/products/ai2flow/PERSISTENCE.md`
+- `docs/products/ai2flow/SCALING_ARCHITECTURE.md`
+- `docs/products/ai2flow/PROJECT_HANDOFF_AI2FLOW.md`
+- `docs/products/ai2flow/CONTRIBUTING.md`
 
 ## Convenção de conectores (handles)
 

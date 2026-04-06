@@ -91,11 +91,12 @@
         "metadata": {},
         "laneColorStrong": "#2F6B45"
       },
-      "selected": false,
+      "selected": true,
       "measured": {
         "width": 220,
         "height": 88
-      }
+      },
+      "dragging": false
     },
     {
       "id": "p4-vercel",
@@ -493,9 +494,10 @@
         "title": "",
         "description": "",
         "metadata": {},
-        "anchorShape": "single-center"
+        "anchorShape": "single-center",
+        "anchorFollowReferenceDisabled": false
       },
-      "selected": true,
+      "selected": false,
       "measured": {
         "width": 32,
         "height": 32
