@@ -135,6 +135,14 @@ scripts/publish-to-public.sh --dry-run
 ```
 
 Os caminhos permitidos para publicacao ficam em `publish-allowlist.txt`.
+Os caminhos proibidos no publico ficam em `publish-denylist.txt` (limpeza e validacao automatica).
+
+Atalhos:
+
+```bash
+npm run publish:public:dry
+npm run publish:public
+```
 
 ## Documentacao de arquitetura e evolucao
 

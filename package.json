@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "publish:public:dry": "scripts/publish-to-public.sh --dry-run",
+    "publish:public": "scripts/publish-to-public.sh --apply --yes"
   },
   "dependencies": {
     "@xyflow/react": "^12.4.4",
