@@ -1,5 +1,6 @@
 const AI2FLOW_PATH = "/ai2flow";
 const COLECTOPS_URL = "/colectops";
+const DESIGN_SYSTEM_PATH = "/design-system";
 
 export default function ServiceHub() {
   return (
@@ -26,6 +27,15 @@ export default function ServiceHub() {
           <p className="service-card__text">Editor visual de jornadas (antigo CXStudio).</p>
           <a className="service-card__link" href={AI2FLOW_PATH}>
             Abrir AI2Flow
+          </a>
+        </article>
+
+        <article className="service-card">
+          <p className="service-card__tag">UI</p>
+          <h2 className="service-card__title">Design System</h2>
+          <p className="service-card__text">Catálogo visual para ajustes e evolução dos componentes.</p>
+          <a className="service-card__link" href={DESIGN_SYSTEM_PATH}>
+            Abrir Design System
           </a>
         </article>
       </section>

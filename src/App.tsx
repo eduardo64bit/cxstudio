@@ -23,6 +23,7 @@ import {
 } from "@xyflow/react";
 import LoginModal from "./components/LoginModal";
 import ColectOpsApp from "./components/ColectOpsApp";
+import DesignSystemPage from "./components/DesignSystemPage";
 import ServiceHub from "./components/ServiceHub";
 import Toolbar from "./components/Toolbar";
 import LaneGridOverlay from "./components/LaneGridOverlay";
@@ -775,6 +776,7 @@ function normalizeFlow(data: FlowJson): FlowJson {
 const AUTH_SESSION_KEY = "cxstudio-auth";
 const AI2FLOW_PATH = "/ai2flow";
 const COLECTOPS_PATH = "/colectops";
+const DESIGN_SYSTEM_PATH = "/design-system";
 
 export default function App() {
   const pathname =
@@ -783,7 +785,8 @@ export default function App() {
       : "/";
   const shouldRenderAi2Flow = pathname === AI2FLOW_PATH;
   const shouldRenderColectOps = pathname === COLECTOPS_PATH;
-  const shouldRenderServiceHub = !shouldRenderAi2Flow && !shouldRenderColectOps;
+  const shouldRenderDesignSystem = pathname === DESIGN_SYSTEM_PATH;
+  const shouldRenderServiceHub = !shouldRenderAi2Flow && !shouldRenderColectOps && !shouldRenderDesignSystem;
 
   if (shouldRenderServiceHub) {
     return <ServiceHub />;
@@ -809,6 +812,13 @@ export default function App() {
     }
     setIsAuthenticated(true);
   }, []);
+
+  if (shouldRenderDesignSystem) {
+    if (!isAuthenticated) {
+      return <LoginModal onSuccess={handleLoginSuccess} />;
+    }
+    return <DesignSystemPage />;
+  }
 
   const persisted = loadFlowFromStorage();
   const initialFlow = normalizeFlow(persisted ?? initialMockFlow);

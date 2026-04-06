@@ -1822,3 +1822,26 @@ button:active {
 .service-card__link:hover {
   background: #111827;
 }
+
+/* Mobile no AI2Flow: somente diagrama, sem menus/paineis de edicao */
+@media (max-width: 900px) {
+  .app-layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "canvas";
+  }
+
+  .toolbar,
+  .node-panel,
+  .ai-panel {
+    display: none !important;
+  }
+
+  .canvas-area {
+    padding-bottom: 0;
+  }
+
+  .canvas-area .react-flow__panel.react-flow__minimap.bottom,
+  .canvas-area .react-flow__panel.react-flow__attribution.bottom {
+    bottom: 10px;
+  }
+}
